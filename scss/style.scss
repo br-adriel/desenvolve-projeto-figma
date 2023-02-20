@@ -20,3 +20,9 @@ body {
   font-family: var(--font-family-text);
   font-weight: var(--font-plain);
 }
+
+button {
+  :hover {
+    cursor: pointer;
+  }
+}

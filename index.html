@@ -6,13 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="theme-color" content="#132235" />
 
-    <title>F4LIFE - Moradias Universitárias</title>
+    <title>F4Life - Moradias Universitárias</title>
 
     <!-- styles -->
-    <link rel="stylesheet" href="./css/reset.css" />
-    <link rel="stylesheet" href="./css/style.css" />
+    <link rel="stylesheet" href="./assets/css/reset.css" />
+    <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <h1>Olá mundo</h1>
+    <header>
+      <h1>
+        <a href="#">
+          <img src="./assets/img/logo.svg" alt="Logo da F4Life" />
+        </a>
+      </h1>
+      <button type="button">
+        <i data-feather="menu" title="Menu"></i>
+      </button>
+    </header>
+
+    <main>
+      <section>
+        <div>
+          <h2>Encontre o seu lugar!</h2>
+          <p>
+            F4Life é uma empresa de aluguéis de repúblicas para pessoas
+            universitárias.
+          </p>
+          <button type="button">Saiba mais</button>
+        </div>
+        <img src="./assets/img/ilustracoes/procura.svg" alt="" />
+      </section>
+      <section>
+        <h2>Quem Somos?</h2>
+        <p>
+          F4Life é uma empresa de aluguéis de repúblicas para pessoas
+          universitárias.Similar aos modelos de Quinto Andar e Loft, a empresa
+          realiza reformas e prepara moradias para recepção de pessoas
+          universitárias em um ambiente específico e otimizado para a vida de
+          graduação.
+        </p>
+        <img src="./assets/img/ilustracoes/ambiente.svg" alt="" />
+      </section>
+      <section>
+        <h2>Veja a opinião dos nossos clientes</h2>
+        <div>
+          <img
+            src="./assets/img/clientes/1.png"
+            alt="Homem branco, sem barba, usando óculos e camisa preta"
+          />
+          <h3>Astrogildo</h3>
+          <q>A F4Life prestou um serviço incrível</q>
+        </div>
+        <div>
+          <img
+            src="./assets/img/clientes/2.png"
+            alt="Mulher asiática de cabelo médio, usando óculos e sorrindo"
+          />
+          <h3>Creuza</h3>
+          <q>Serviço de qualidade com um preço justo</q>
+        </div>
+        <div>
+          <img
+            src="./assets/img/clientes/3.png"
+            alt="Mulher branca usando brinco e batom vermelho"
+          />
+          <h3>Jurema</h3>
+          <q>
+            Já tive experiência com outras empresas, mas a F4Life, sem dúvidas
+            tem o melhor serviço
+          </q>
+        </div>
+      </section>
+      <section>
+        <h2>Entre em contato</h2>
+        <form action="">
+          <div>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required />
+          </div>
+          <div>
+            <label for="mensagem">Mensagem</label
+            ><textarea
+              name="mensagem"
+              id="mensagem"
+              cols="30"
+              rows="10"
+              required
+            ></textarea>
+          </div>
+          <button type="submit">Enviar</button>
+        </form>
+        <img src="./assets/img/ilustracoes/atendimento.svg" alt="" />
+      </section>
+      <footer>
+        <div>
+          <a href="#" title="Facebook da F4Life">
+            <img
+              src="./assets/img/icones/facebook.svg"
+              alt="Ícone do facebook"
+            />
+          </a>
+          <a href="#" title="LinkedIn da F4Life">
+            <img
+              src="./assets/img/icones/linkedin.svg"
+              alt="Ícone do LinkedIn"
+            />
+          </a>
+          <a href="#" title="Twitter da F4Life">
+            <img src="./assets/img/icones/twitter.svg" alt="Ícone do Twitter" />
+          </a>
+        </div>
+      </footer>
+    </main>
+
+    <!-- Feather icons -->
+    <script src="./assets/js/feather.min.js"></script>
+    <script>
+      feather.replace();
+    </script>
   </body>
 </html>
