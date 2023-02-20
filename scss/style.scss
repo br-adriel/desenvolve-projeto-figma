@@ -1,0 +1,22 @@
+/* Google fonts */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+:root {
+  /* Colors */
+  --primary: #132235;
+  --secondary: #6ddad3;
+  --shadow: #a2a8af;
+  --bg: #ffffff;
+
+  /* Font families */
+  --font-family-text: 'Open Sans', sans-serif;
+
+  /* Font weights */
+  --font-bold: 700;
+  --font-plain: 400;
+}
+
+body {
+  font-family: var(--font-family-text);
+  font-weight: var(--font-plain);
+}
