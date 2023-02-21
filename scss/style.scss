@@ -289,6 +289,23 @@ header nav.active {
   }
 }
 
+/* Footer */
+footer {
+  display: flex;
+  padding: 8px 0;
+
+  > * {
+    display: none;
+  }
+
+  .social-links {
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+}
+
 /* Animations */
 @keyframes entrada {
   from {
