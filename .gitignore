@@ -1,2 +1,4 @@
 node_modules
-css
+scss
+package.json
+package-lock.json
