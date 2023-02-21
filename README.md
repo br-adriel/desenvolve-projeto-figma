@@ -1,6 +1,7 @@
 # Página web F4Life 💻
 
-Página web construída a partir de design feito no Figma e disponibilizado em um programa educacional.
+Página web responsiva construída com metodologia mobile first a partir de design feito no Figma e disponibilizado
+em um programa educacional. [Confira o resultado da página implementada](https://br-adriel.github.io/desenvolve-projeto-figma/).
 
 ![HTML5](https://img.shields.io/badge/html5-%23E34F26.svg?style=for-the-badge&logo=html5&logoColor=white)
 ![SASS](https://img.shields.io/badge/SASS-hotpink.svg?style=for-the-badge&logo=SASS&logoColor=white)
