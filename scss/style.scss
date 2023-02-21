@@ -87,6 +87,7 @@ h3 {
 }
 
 h2,
+h3,
 p {
   line-height: 136.68%;
 }
@@ -199,6 +200,7 @@ header nav.active {
 
   img {
     margin-bottom: 30px;
+    width: 100%;
   }
 }
 
@@ -212,6 +214,10 @@ header nav.active {
 
   p {
     margin-bottom: 30px;
+  }
+
+  img {
+    width: 100%;
   }
 }
 
@@ -247,6 +253,39 @@ header nav.active {
         text-align: center;
       }
     }
+  }
+}
+
+/* Section - Contato */
+#contato {
+  padding: 55px 20px 0;
+  gap: 20px;
+
+  &,
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  .form-group {
+    margin-bottom: 15px;
+
+    label {
+      display: block;
+      margin-bottom: 5px;
+    }
+  }
+
+  button {
+    align-self: flex-end;
+  }
+
+  img {
+    width: 100%;
   }
 }
 
