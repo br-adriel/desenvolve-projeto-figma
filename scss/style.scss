@@ -182,6 +182,20 @@ header nav.active {
   }
 }
 
+/* Section - Quem somos */
+#quem-somos {
+  padding: 20px;
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+    line-height: 136.68%;
+  }
+}
+
 /* Animations */
 @keyframes entrada {
   from {
