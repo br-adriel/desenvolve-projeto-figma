@@ -5,7 +5,7 @@
   /* Colors */
   --primary: #132235;
   --secondary: #6ddad3;
-  --shadow: #a2a8af;
+  --shadow: rgba(0, 0, 0, 0.75);
   --bg: #ffffff;
 
   /* Font families */
@@ -126,7 +126,10 @@ header {
   align-items: center;
   justify-content: space-between;
   padding: 18px 12px;
-  box-shadow: 0 4px 4px var(--shadow);
+  box-shadow: 0 0px 4px var(--shadow);
+  position: sticky;
+  top: 0;
+  left: 0;
 
   img {
     width: 160px;
