@@ -18,6 +18,7 @@
   /* Font sizes */
   --fs-plain-small: 14px;
   --fs-plain: 16px;
+  --fs-plain-medium: 16px;
   --fs-title-small: 20px;
   --fs-title: 24px;
   --fs-title-huge: 45px;
@@ -30,6 +31,7 @@
   @media screen and (min-width: 768px) {
     /* Font sizes */
     --fs-plain: 18px;
+    --fs-plain-medium: 25px;
     --fs-title: 52px;
     --fs-title-huge: 76px;
     --fs-button: 34px;
@@ -218,12 +220,14 @@ header nav.active {
 }
 
 /* Section - Início */
-#inicio {
+#inicio .container {
   display: flex;
   flex-direction: column;
 
   div {
     padding: 20px;
+    display: flex;
+    flex-direction: column;
   }
 
   h2 {
@@ -233,16 +237,36 @@ header nav.active {
 
   p {
     margin-bottom: 30px;
+    font-size: var(--fs-plain-medium);
   }
 
   .btn {
-    width: 100%;
     font-size: var(--fs-title-small);
   }
 
   img {
     margin-bottom: 30px;
     width: 100%;
+  }
+
+  @media screen and (min-width: 1240px) {
+    flex-direction: row;
+    padding-top: 100px;
+    padding-bottom: 210px;
+
+    img {
+      width: 45%;
+    }
+
+    div p {
+      flex-grow: 1;
+    }
+
+    div .btn {
+      align-self: flex-start;
+      width: auto;
+      padding: 20px 108px;
+    }
   }
 }
 
