@@ -19,6 +19,7 @@
   --fs-plain-small: 14px;
   --fs-plain: 16px;
   --fs-plain-medium: 16px;
+  --fs-plain-large: 16px;
   --fs-title-small: 20px;
   --fs-title: 24px;
   --fs-title-huge: 45px;
@@ -32,6 +33,7 @@
     /* Font sizes */
     --fs-plain: 18px;
     --fs-plain-medium: 25px;
+    --fs-plain-large: 30px;
     --fs-title: 52px;
     --fs-title-huge: 76px;
     --fs-button: 34px;
@@ -280,10 +282,28 @@ header nav.active {
 
   p {
     margin-bottom: 30px;
+    font-size: var(--fs-plain-large);
   }
 
   img {
     width: 100%;
+  }
+
+  @media screen and (min-width: 1240px) {
+    & {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+    }
+
+    .container {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    img {
+      width: 45%;
+    }
   }
 }
 
@@ -319,6 +339,10 @@ header nav.active {
         text-align: center;
       }
     }
+  }
+
+  @media screen and (min-width: 768px) {
+    display: none;
   }
 }
 
