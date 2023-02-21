@@ -1,5 +1,5 @@
 /* Google fonts */
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,400;0,700;1,400&display=swap');
 
 :root {
   /* Colors */
@@ -16,6 +16,7 @@
   --font-plain: 400;
 
   /* Font sizes */
+  --fs-plain-small: 14px;
   --fs-plain: 16px;
   --fs-title-small: 20px;
   --fs-title: 24px;
@@ -83,6 +84,22 @@ h1,
 h2,
 h3 {
   font-size: var(--fs-title);
+}
+
+h2,
+p {
+  line-height: 136.68%;
+}
+
+q {
+  font-style: italic;
+
+  &::before {
+    content: '"';
+  }
+  &::after {
+    content: '"';
+  }
 }
 
 img {
@@ -192,7 +209,41 @@ header nav.active {
 
   p {
     margin-bottom: 30px;
-    line-height: 136.68%;
+  }
+}
+
+/* Section - Opinioes */
+#opiniao {
+  padding: 20px;
+  padding-bottom: 40px;
+
+  h2 {
+    margin-bottom: 50px;
+  }
+
+  .opiniao__clientes,
+  .opiniao__clientes .testemunho {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .opiniao__clientes {
+    gap: 50px;
+
+    .testemunho {
+      gap: 8px;
+
+      h3,
+      q {
+        font-size: var(--fs-plain-small);
+      }
+
+      q {
+        max-width: 166px;
+        text-align: center;
+      }
+    }
   }
 }
 
