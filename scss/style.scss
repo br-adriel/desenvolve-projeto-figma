@@ -21,10 +21,19 @@
   --fs-title-small: 20px;
   --fs-title: 24px;
   --fs-title-huge: 45px;
+  --fs-button: 16px;
 
   /* Border radius */
   --radius-btn: 8px;
   --radius-input: 10px;
+
+  @media screen and (min-width: 768px) {
+    /* Font sizes */
+    --fs-plain: 18px;
+    --fs-title: 52px;
+    --fs-title-huge: 76px;
+    --fs-button: 34px;
+  }
 }
 
 body {
@@ -53,9 +62,14 @@ button,
   font-weight: var(--font-bold);
   text-align: center;
   display: inline-block;
+  font-size: var(--fs-button);
 
   :hover {
     cursor: pointer;
+  }
+
+  @media screen and (min-width: 768px) {
+    padding: 16px 45px;
   }
 }
 
@@ -121,30 +135,58 @@ img {
   color: var(--secondary);
 }
 
+.container {
+  width: min(1240px, 100%);
+  margin: 0 auto;
+}
+
 /* Header */
 header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 18px 12px;
   box-shadow: 0 0px 4px var(--shadow);
-  position: sticky;
-  top: 0;
-  left: 0;
+
+  .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 18px 12px;
+
+    @media screen and (min-width: 768px) {
+      padding: 14px 12px 14px 0;
+    }
+  }
 
   img {
     width: 160px;
+
+    @media screen and (min-width: 768px) {
+      width: 288px;
+    }
   }
 
   nav a {
     font-weight: var(--font-bold);
     color: #fff;
   }
+
+  @media screen and (min-width: 768px) {
+    button {
+      display: none;
+    }
+  }
 }
 
 /* Header -- Nav */
 header nav {
   display: none;
+
+  @media screen and (min-width: 768px) {
+    display: flex;
+
+    ul {
+      display: flex;
+      gap: 50px;
+    }
+  }
 }
 
 header nav.active {
