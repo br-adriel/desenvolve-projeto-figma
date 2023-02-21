@@ -14,15 +14,184 @@
   /* Font weights */
   --font-bold: 700;
   --font-plain: 400;
+
+  /* Font sizes */
+  --fs-plain: 16px;
+  --fs-title-small: 20px;
+  --fs-title: 24px;
+  --fs-title-huge: 45px;
+
+  /* Border radius */
+  --radius-btn: 8px;
+  --radius-input: 10px;
 }
 
 body {
+  font-size: var(--fs-plain);
   font-family: var(--font-family-text);
   font-weight: var(--font-plain);
+  background-color: var(--bg);
 }
 
-button {
+a {
+  text-decoration: none;
+  color: var(--secondary);
+
+  :hover {
+    text-decoration: underline;
+  }
+}
+
+button,
+.btn {
+  border: none;
+  background: var(--primary);
+  color: white;
+  padding: 5px 10px;
+  border-radius: var(--radius-btn);
+  font-weight: var(--font-bold);
+  text-align: center;
+  display: inline-block;
+
   :hover {
     cursor: pointer;
+  }
+}
+
+input,
+textarea {
+  border-radius: var(--radius-input);
+  padding: 8px;
+  width: 100%;
+  border: 1px solid var(--primary);
+}
+
+textarea {
+  resize: none;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: var(--font-bold);
+}
+
+h1,
+h2,
+h3 {
+  font-size: var(--fs-title);
+}
+
+img {
+  max-width: 100%;
+}
+
+/* Classes for style */
+.bg-primary {
+  background-color: var(--primary);
+  color: #fff;
+}
+
+.text-primary {
+  color: var(--primary);
+}
+
+.text-secondary {
+  color: var(--secondary);
+}
+
+/* Header */
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 18px 12px;
+  box-shadow: 0 4px 4px var(--shadow);
+
+  img {
+    width: 160px;
+  }
+
+  nav a {
+    font-weight: var(--font-bold);
+    color: #fff;
+  }
+}
+
+/* Header -- Nav */
+header nav {
+  display: none;
+}
+
+header nav.active {
+  display: block;
+  background: var(--primary);
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow-y: auto;
+  padding: 20px;
+  box-shadow: 0 0 8px var(--shadow);
+  animation-name: entrada;
+  animation-duration: 0.3s;
+  animation-fill-mode: forwards;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  button {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+  }
+}
+
+/* Section - Início */
+#inicio {
+  display: flex;
+  flex-direction: column;
+
+  div {
+    padding: 20px;
+  }
+
+  h2 {
+    font-size: var(--fs-title-huge);
+    margin-bottom: 20px;
+  }
+
+  p {
+    margin-bottom: 30px;
+  }
+
+  .btn {
+    width: 100%;
+    font-size: var(--fs-title-small);
+  }
+
+  img {
+    margin-bottom: 30px;
+  }
+}
+
+/* Animations */
+@keyframes entrada {
+  from {
+    transform: translateX(100%);
+    display: none;
+    opacity: 0;
+  }
+  to {
+    transform: translate(0%);
+    display: block;
+    opacity: 1;
   }
 }

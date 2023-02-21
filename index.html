@@ -13,20 +13,23 @@
     <link rel="stylesheet" href="./assets/css/style.css" />
   </head>
   <body>
-    <header>
+    <header class="bg-primary">
       <h1>
         <a href="#">
           <img src="./assets/img/logo.svg" alt="Logo da F4Life" />
         </a>
       </h1>
-      <nav>
+      <nav id="navegacao">
+        <button type="button" id="botao-fechar-nav">
+          <i data-feather="x" title="Fechar menu"></i>
+        </button>
         <ul>
           <li><a href="#inicio">Início</a></li>
           <li><a href="#quem-somos">Quem somos?</a></li>
           <li><a href="#contato">Entre em contato</a></li>
         </ul>
       </nav>
-      <button type="button">
+      <button type="button" id="botao-abrir-nav">
         <i data-feather="menu" title="Menu"></i>
       </button>
     </header>
@@ -39,11 +42,11 @@
             F4Life é uma empresa de aluguéis de repúblicas para pessoas
             universitárias.
           </p>
-          <button type="button">Saiba mais</button>
+          <a href="#" class="btn text-secondary">Saiba mais</a>
         </div>
         <img src="./assets/img/ilustracoes/procura.svg" alt="" />
       </section>
-      <section id="quem-somos">
+      <section id="quem-somos" class="bg-primary">
         <h2>Quem Somos?</h2>
         <p>
           F4Life é uma empresa de aluguéis de repúblicas para pessoas
@@ -54,7 +57,7 @@
         </p>
         <img src="./assets/img/ilustracoes/ambiente.svg" alt="" />
       </section>
-      <section>
+      <section class="bg-primary">
         <h2>Veja a opinião dos nossos clientes</h2>
         <div>
           <img
@@ -105,7 +108,7 @@
         </form>
         <img src="./assets/img/ilustracoes/atendimento.svg" alt="" />
       </section>
-      <footer>
+      <footer class="bg-primary">
         <img src="./assets/img/logo.svg" alt="Logo da F4Life" />
         <div>
           <a href="#" title="Facebook da F4Life">
@@ -133,5 +136,8 @@
     <script>
       feather.replace();
     </script>
+
+    <!-- Navbar mobile -->
+    <script src="./assets/js/mobile-nav.js"></script>
   </body>
 </html>
