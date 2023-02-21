@@ -21,19 +21,22 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
+  build_css:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Sass Build
+        uses: gha-utilities/sass-build@v0.4.11
+        with:
+          source: scss/
+          destination: assets/css/
+          outputStyle: "compressed"
+          omitSourceMapUrl: true
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
     steps:
-      - name: Sass Build
-        uses: gha-utilities/sass-build@v0.4.11
-        with:
-          source: scss
-          destination: assets/css
-          outputStyle: "compressed"
-          omitSourceMapUrl: true
       - name: Checkout
         uses: actions/checkout@v3
       - name: Setup Pages
